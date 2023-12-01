@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luvi Reposteria</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+<!-- Header -->
+<header style="background-color: #f5b7b1;">
+    <div class="logo" style="color: #000000; display: flex; align-items: center;">
+        <img src="img/colibri.png" alt="Logo" style="width: 40px; height: auto; margin-left: 10px;">
+    </div>
+    <div class="search" style="display: flex; align-items: center;">
+        <input type="text" placeholder="Buscar" style="margin-right: 5px;">
+        <img src="img/lupa.png" alt="Icono de búsqueda" style="width: 20px; height: auto;">
+    </div>
+</header>
+
+
+
+<!-- Slogan -->
+<div class="slogan-container" style="background-color: #f5b7b1; padding: 20px; text-align: center; border: 2px solid #f5b7b1;">
+    <div class="slogan" style="color: #000000; font-size: 18px;">Sabores que inspiran, creaciones que enamoran</div>
+</div>
+
+
+
+<!-- Contenedor -->
+<div class="container" style="background-color: #f9e8e5;">
+    <div class="symbols">
+        <a class="symbol" style="background-color: #fabcb5; color: #000000;">
+            <img src="img/inicio.png" alt="Ícono de Inicio">
+            INICIO
+        </a>
+        <a href="pagina_contacto.html" class="symbol" style="background-color: #fabcb5; color: #000000;">
+            <img src="img/contacto.png" alt="Ícono de Contacto">
+            CONTACTO
+        </a>
+        <a href="pagina_favoritos.html" class="symbol" style="background-color: #fabcb5; color: #000000;">
+            <img src="img/favoritos.png" alt="Ícono de Favoritos">
+            FAVORITOS
+        </a>
+        <a href="pagina_pasteles.html" class="symbol" style="background-color: #fabcb5; color: #000000;">
+            <img src="img/pasteles.png" alt="Ícono de Pasteles">
+            PASTELES
+        </a>
+        <a href="pagina_galletas.html" class="symbol" style="background-color: #fabcb5; color: #000000;">
+            <img src="img/galletas.png" alt="Ícono de Galletas">
+            GALLETAS
+        </a>
+        <a href="pagina_otros_productos.html" class="symbol" style="background-color: #fabcb5; color: #000000;">
+            <img src="img/otros-productos.png" alt="Ícono de Otros Productos">
+            OTROS PRODUCTOS
+        </a>
+        <a href="pagina_personalizados.html" class="symbol" style="background-color: #fabcb5; color: #000000; ">
+            <img src="img/personalizados.png" alt="Ícono de Personalizados">
+            PERSONALI ZADOS
+        </a>
+    </div>
+
+    <!-- Slideshow de imágenes -->
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <div class="slide-image-container">
+                <img src="img/r1.png">
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="slide-image-container">
+                <img src="img/r2.png">
+            </div>
+        </div>
+        <div class="mySlides">
+            <div class="slide-image-container">
+                <img src="img/r3.png">
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer style="background-color: #333; color: #fff; text-align: center; padding: 10px;">
+    Navis 2023
+</footer>
+
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Cambia la imagen cada 2 segundos (ajustable)
+    }
+
+    function plusSlides(n) {
+        showSlides();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luvi Reposteria</title>
+    <!-- Enlazar tus estilos CSS -->
+    <link rel="stylesheet" href="styles_favoritos.css">
+</head>
+<body>
+
+<!-- Header -->
+<header style="background-color: #f5b7b1;">
+    <div class="search" style="display: flex; align-items: center; margin-right: 10px;">
+        <input type="text" placeholder="Buscar" style="margin-right: 5px;">
+        <img src="img/lupa.png" alt="Icono de búsqueda" style="width: 20px; height: auto;">
+    </div>
+
+    <div class="header-icons" >
+        <div class="header-icon">
+            <a href="index.html">
+                <img src="img/inicio.png" alt="Ícono de Inicio">
+                <span>INICIO</span>
+            </a>
+        </div>
+        <div class="header-icon">
+            <a href="pagina_contacto.html">
+                <img src="img/contacto.png" alt="Ícono de Contacto">
+                <span>CONTACTO</span>
+            </a>
+        </div>
+        <div class="header-icon">
+            <a href="pagina_favoritos.html">
+                <img src="img/favoritos.png" alt="Ícono de Favoritos">
+                <span>FAVORITOS</span>
+            </a>
+        </div>
+        <div class="header-icon">
+            <a href="pagina_pasteles.html">
+                <img src="img/pasteles.png" alt="Ícono de Pasteles">
+                <span>PASTELES</span>
+            </a>
+        </div>
+        <div class="header-icon">
+            <a href="pagina_galletas.html">
+                <img src="img/galletas.png" alt="Ícono de Galletas">
+                <span>GALLETAS</span>
+            </a>
+        </div>
+        <div class="header-icon">
+            <a href="pagina_otros_productos.html">
+                <img src="img/otros-productos.png" alt="Ícono de Otros Productos">
+                <span>OTROS PRODUCTOS</span>
+            </a>
+        </div>
+        <div class="header-icon">
+            <a href="pagina_personalizados.html">
+                <img src="img/personalizados.png" alt="Ícono de Personalizados">
+                <span>PERSONALIZADOS</span>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Página de Favoritos -->
+<div class="container" style="background-color: #f9e8e5; padding: 20px;">
+
+     <!-- Menú de filtros -->
+     <div class="filtros">
+        <div class="filtro-seccion">
+            <h3>Tamaño</h3>
+            <div class="filtro-opcion" onclick="filtrarPorTamano('individual')">
+                <input type="checkbox" id="tamanoIndividual"> Individual
+            </div>
+            <div class="filtro-opcion" onclick="filtrarPorTamano('8 personas')">
+                <input type="checkbox" id="tamano8"> 8 personas
+            </div>
+            <div class="filtro-opcion" onclick="filtrarPorTamano('12 personas')">
+                <input type="checkbox" id="tamano12"> 12 personas
+            </div>
+            <div class="filtro-opcion" onclick="filtrarPorTamano('16 personas')">
+                <input type="checkbox" id="tamano16"> 16 personas
+            </div>
+        </div>
+        <div class="filtro-seccion">
+            <h3>Orden de productos</h3>
+            <div class="drop-down">
+                <select onchange="ordenarProductos(this.value)">
+                    <option value="Default">Default</option>
+                    <option value="precioDescendente">$ Mayor a Menor</option>
+                    <option value="precioAscendiente">$ Menor a Mayor</option>
+                    <option value="alfabeticamente">Alfabeticamente A-Z</option>
+                    <option value="alfabeticamente">Alfabeticamente Z-A</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="cake-boxes">
+        <!-- Primer renglón -->
+        <div class="cake-row">
+            <div class="cake-box">
+                <img src="img/f1.png" alt="Pastel 1">
+                <span>Pastel de 3 leches</span>
+            </div>
+            <div class="cake-box">
+                <img src="img/p2.png" alt="Pastel 2">
+                <span>Pastel de chocolate</span>
+            </div>
+            <div class="cake-box">
+                <img src="img/p3.png" alt="Pastel 3">
+                <span>Pastel de vainilla</span>
+            </div>
+        </div>
+        <!-- Segundo renglón -->
+        <div class="cake-row">
+            <div class="cake-box">
+                <img src="img/p4.png" alt="Pastel 4">
+                <span>Pastel pink rose</span>
+            </div>
+            <div class="cake-box">
+                <img src="img/p5.png" alt="Pastel 5">
+                <span>Chocolate Fudge y moras</span>
+            </div>
+            <div class="cake-box">
+                <img src="img/p6.png" alt="Pastel 6">
+                <span>Pastel de red velvet</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<footer style="background-color: #333; color: #fff; text-align: center; padding: 10px;">
+    Navis 2023
+</footer>
+</body>
+</html>
